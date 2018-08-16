@@ -1,0 +1,8 @@
+<%= form_for(@new_song) do |form| %>
+  <p>Title: <%= form.text_field :title %></p>
+  <p>Released: <%= form.check_box :released, {}, true, false %></p>
+  <p>Release Year:<%= form.number_field :release_year %></p>
+  <p>Artist Name: <%= form.text_field :artist_name %></p>
+  <p>Genre: <%= form.text_field :genre %></p>
+  <%= form.submit "Create Song" %>
+<% end %>
