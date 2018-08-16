@@ -1,0 +1,10 @@
+<h1>Songs#new</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.text_field :title, placeholder: "title" %>
+  <%= f.text_field :released, placeholder: "true/false" %>
+  <%= f.text_field :release_year, placeholder: "release year" %>
+  <%= f.text_field :artist_name, placeholder: "artist name" %>
+  <%= f.text_field :genre, placeholder: "genre" %>
+  <%= f.submit "Create" %>
+<% end %>
