@@ -1,0 +1,5 @@
+# t.string   "title"
+#     t.boolean  "released"
+#     t.integer  "release_year"
+#     t.string   "artist_name"
+#     t.string   "genre"
