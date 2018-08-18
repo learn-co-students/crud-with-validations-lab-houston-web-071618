@@ -1,0 +1,5 @@
+<h2>Editing <%= @song.title %> by <%=@song.artist_name%></h2>
+<%=render 'form'%>
+
+<%= button_to 'Stop edit', song_path(@song), method: 'get' %>
+<%=button_to 'Delete song', @song, method: :delete, data: {confirm: 'Are you sure?'}%>
