@@ -1,0 +1,12 @@
+#Edit page
+
+<%= form_for @song, url: {:action => "update" } do |f| %>
+  <%= f.text_field :title %>
+  <!-- cannot add , :discard_day => true, :discard_month => true options to line six without-->
+  <!-- an error saying no method "change" for 2016::Fixnum -->
+  <!-- :start_year => 1800, :end_year => Date.today.year -->
+  <%= f.select :release_year, options_for_select((1800..Date.today.year.to_i).to_a, @song.release_year || default) %>
+  <%= f.text_field :artist_name %>
+  <%= f.text_field :genre %>
+  <%= f.submit "Update Song" %>
+<% end %>
