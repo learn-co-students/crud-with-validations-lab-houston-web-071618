@@ -2,8 +2,8 @@ class Song < ActiveRecord::Base
 
     validates :title, {
         presence: true,
-        length: {minimum: 1}
-        #must be unique in artist.songs for current year
+        length: {minimum: 1},
+        uniqueness: {scope: [:release_year, :artist_name]}
     }
     validates :released, {
         inclusion: {in: [true, false]}
@@ -23,5 +23,6 @@ class Song < ActiveRecord::Base
     def released?
         self.released
     end
+
 
 end
